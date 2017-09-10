@@ -1,0 +1,12 @@
+$color-map: (
+  'primary': #042350,
+  'active': #97BAD8,
+  'inactive': #9CA5AB,
+  'border': #f2f2f2,
+  'white': #ffffff,
+  'black': #000000
+);
+
+@function color($color-name, $opacity: 1) {
+  @return rgba(map-get($color-map, $color-name), $opacity);
+}

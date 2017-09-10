@@ -1,0 +1,142 @@
+&{
+  .slick-slider {
+    width:100vw;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    z-index: 0;
+  
+    .slick-prev,
+    .slick-next {
+      background-color: color('black', .6);
+      width: 40px;
+      height: 80px;
+      z-index: 10;
+  
+      &:hover {
+        background-color: color('primary');
+      }
+    }
+  
+    .slick-prev {
+      left: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  
+    .slick-next {
+      right: 0; 
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  
+    .box {
+      position: relative;
+      height: 500px;
+      z-index: 0;
+      img {
+        width:100vw;
+        height: auto;
+      }
+  
+      .text {
+        position: absolute;
+        left: 80px;
+        top: 40px;
+        bottom: 40px;
+        width: 400px;
+        background-color: color('black', .6);
+        color: color('white');
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 25px;
+        margin: 0;
+  
+        .header {
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: -0.2px;
+          line-height: 23px;
+          border-bottom: 1px solid color('white');
+          padding: 8px;
+          width: 100%;
+        }
+  
+        .description {
+          padding: 8px;
+          font-size: 11px;
+          letter-spacing: -0.1px;
+          line-height: 13px;
+        }
+      }
+    }
+  
+    .slick-dots {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      z-index: 11;
+      bottom: 0;
+      height: auto;
+      background-color: color('black', .6);
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: auto;
+        button {
+          display: block;
+          border-radius: 0;
+          padding: 0;
+          height: 4px;
+          width: 30px;
+          background-color: color('active');
+          &::before {
+            font-family: inherit;
+            content: "";
+          }
+        }
+  
+        &.slick-active {
+          button {
+            background-color: color('primary');
+          }
+        }
+      }
+    }
+  
+  
+    @media (max-width: 590px) {
+      .box {
+        height: 400px;
+        img {
+          height: 400px;
+          width: auto;
+        }
+        .text {
+          font-size: 20px;
+          width: auto;
+          right: 80px;
+        }
+      }
+    }
+  
+    @media (max-width: 900px) and (min-width: 590px) {
+      .box {
+        height: 500px;
+        img {
+          height: 500px;
+          width: auto;
+        }
+  
+        .text {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

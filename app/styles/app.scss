@@ -1,0 +1,16 @@
+@import 'ember-paper';
+@import 'common/colors';
+@import "pod-styles";
+
+body {
+  box-sizing: border-box;
+  * {
+    box-sizing: inherit;
+  }
+  > .ember-view {
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

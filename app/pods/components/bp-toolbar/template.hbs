@@ -1,0 +1,46 @@
+<div class="toolbar">
+  <div class="brand">
+    {{#link-to "index"}}
+      <img src="/blueprint-logo.png" alt="logo" class="logo">
+    {{/link-to}}
+  </div>
+  {{#if smallDevice}}
+    {{#paper-button iconButton=true click=(action (toggle "navigationOpen" this))}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}  
+  {{/if}}
+  {{#liquid-if showNavigation class="navigation"}}
+    {{#link-to "index" class="nav-link"}}
+      O nama
+    {{/link-to}}
+    {{#link-to "usluge" class="nav-link"}}
+      Usluge
+    {{/link-to}}
+    {{#link-to "reference" class="nav-link"}}
+      Reference
+    {{/link-to}}
+    {{#link-to "kontakt" class="nav-link"}}
+      Kontakt
+    {{/link-to}}
+  {{/liquid-if}}
+</div>
+<div class="contacts">
+  <div class="layout-row social">
+    <a href="#" class="link">{{svg-jar "facebook-logo"}}</a>
+    <a href="#" class="link">{{svg-jar "linkedin-logo"}}</a>
+  </div>
+  <div class="layout-row contact">
+    <div class="info">
+      <span class="label">Email: </span>
+      <a href="mailto:info@blueprint.ba" class="data">info@blueprint.ba</a>
+    </div>
+    <div class="info">
+      <span class="label">Tel: </span>
+      <a href="tel:+38733710710" class="data">+387 33 710 710</a>
+    </div>
+    <div class="info">
+      <span class="label">Mob: </span>
+      <a href="tel:+38761218550" class="data">+387 61 218 550</a>   
+    </div>
+  </div>
+</div>

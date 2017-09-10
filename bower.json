@@ -1,0 +1,6 @@
+{
+  "name": "blueprint",
+  "dependencies": {
+    "slick-carousel": "^1.7.1"
+  }
+}
