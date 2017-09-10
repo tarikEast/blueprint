@@ -5,9 +5,9 @@
     {{/link-to}}
   </div>
   {{#if smallDevice}}
-    {{#paper-button iconButton=true click=(action (toggle "navigationOpen" this))}}
-      {{paper-icon "menu"}}
-    {{/paper-button}}  
+    <div class="burger-button" {{action (action (toggle "navigationOpen" this))}}>
+      {{svg-jar "menu"}}
+    </div> 
   {{/if}}
   {{#liquid-if showNavigation class="navigation"}}
     {{#link-to "index" class="nav-link"}}

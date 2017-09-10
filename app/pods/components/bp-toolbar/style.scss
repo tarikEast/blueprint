@@ -64,7 +64,6 @@
     }
 
     svg {
-      fill: currentColor;
       height: 18px;
       width: auto;
       margin: 6px;
@@ -79,6 +78,13 @@
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid color('border');
+
+    .burger-button {
+      color: color('inactive');
+      &:hover {
+        color: color('primary');
+      }
+    }
 
     .brand {
       display: flex;

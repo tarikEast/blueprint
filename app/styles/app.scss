@@ -1,9 +1,18 @@
-@import 'ember-paper';
 @import 'common/colors';
+@import 'common/fonts';
 @import "pod-styles";
 
 body {
+  font-family: 'Roboto', serif;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+
+  svg {
+    fill: currentColor;
+  }
+
   * {
     box-sizing: inherit;
   }
@@ -12,5 +21,19 @@ body {
     display: flex;
     overflow-x: hidden;
     overflow-y: auto;
+
+    .layout-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout-row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .flex {
+      flex-grow: 1;
+    }
   }
 }
