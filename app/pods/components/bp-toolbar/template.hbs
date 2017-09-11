@@ -1,7 +1,7 @@
 <div class="toolbar">
   <div class="brand">
     {{#link-to "index"}}
-      <img src="blueprint-logo.png" alt="logo" class="logo">
+      {{svg-jar "logo" class="logo"}}
     {{/link-to}}
   </div>
   {{#if smallDevice}}
@@ -31,15 +31,21 @@
   </div>
   <div class="layout-row contact">
     <div class="info">
-      <span class="label">Email: </span>
+      <span class="label">
+        {{svg-jar "email"}}
+      </span>
       <a href="mailto:info@blueprint.ba" class="data">info@blueprint.ba</a>
     </div>
     <div class="info">
-      <span class="label">Tel: </span>
+      <span class="label">
+        {{svg-jar "tel"}}
+      </span>
       <a href="tel:+38733710710" class="data">+387 33 710 710</a>
     </div>
     <div class="info">
-      <span class="label">Mob: </span>
+      <span class="label">
+        {{svg-jar "cell"}}
+      </span>
       <a href="tel:+38761218550" class="data">+387 61 218 550</a>   
     </div>
   </div>

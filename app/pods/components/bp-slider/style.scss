@@ -16,6 +16,17 @@
         background-color: color('primary');
       }
     }
+
+    @media screen and (max-width: 960px) {
+      .slick-prev,
+      .slick-next {
+        display: none;
+      }
+
+      .box {
+        font-size: 80%;
+      }
+    }
   
     .slick-prev {
       left: 0;
@@ -31,44 +42,41 @@
   
     .box {
       position: relative;
-      height: 500px;
       z-index: 0;
+      display: flex;
+      align-items: center;
+      
       img {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translateX(-50%) translateY(-50%);
         width:100vw;
         height: auto;
       }
   
       .text {
         position: absolute;
-        left: 80px;
-        top: 40px;
-        bottom: 40px;
-        width: 400px;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background-color: color('black', .6);
         color: color('white');
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
         padding: 25px;
+        padding-bottom: 45px;
         margin: 0;
   
         .header {
-          font-size: 18px;
+          font-size: 2em;
           font-weight: bold;
           letter-spacing: -0.2px;
-          line-height: 23px;
-          border-bottom: 1px solid color('white');
+          line-height: 1.2;
           padding: 8px;
           width: 100%;
-        }
-  
-        .description {
-          padding: 8px;
-          font-size: 11px;
-          letter-spacing: -0.1px;
-          line-height: 13px;
         }
       }
     }
@@ -105,36 +113,6 @@
           button {
             background-color: color('primary');
           }
-        }
-      }
-    }
-  
-  
-    @media (max-width: 590px) {
-      .box {
-        height: 400px;
-        img {
-          height: 400px;
-          width: auto;
-        }
-        .text {
-          font-size: 20px;
-          width: auto;
-          right: 80px;
-        }
-      }
-    }
-  
-    @media (max-width: 900px) and (min-width: 590px) {
-      .box {
-        height: 500px;
-        img {
-          width:100vw;
-          height: auto;
-        }
-  
-        .text {
-          font-size: 30px;
         }
       }
     }
